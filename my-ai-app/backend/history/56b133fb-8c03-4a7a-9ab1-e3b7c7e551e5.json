@@ -1,0 +1,14 @@
+[
+  {
+    "session_id": "56b133fb-8c03-4a7a-9ab1-e3b7c7e551e5",
+    "role": "user",
+    "text": "Where is Goa located",
+    "timestamp": "2025-12-17 12:24:14.446517"
+  },
+  {
+    "session_id": "56b133fb-8c03-4a7a-9ab1-e3b7c7e551e5",
+    "role": "model",
+    "text": "Goa is located on the **western coast of India**, specifically within the region known as the **Konkan**.\n\nHere are the key geographical details:\n\n* **States it borders:** It is bordered by the state of **Maharashtra** to the north and **Karnataka** to the east and south.\n* **Body of water:** It lies along the **Arabian Sea** to the west.",
+    "timestamp": "2025-12-17 12:24:16.178733"
+  }
+]

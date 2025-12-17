@@ -1,0 +1,200 @@
+/* src/App.css */
+
+/* 1. RESET & BASE STYLES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1e1e1e; /* Dark background */
+  color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  height: 100vh;
+  overflow: hidden; /* Prevent full page scroll */
+}
+
+/* 2. MAIN LAYOUT (The Split Screen) */
+.app-container {
+  display: flex; /* This makes them sit side-by-side */
+  height: 100vh;
+  width: 100vw;
+}
+
+/* 3. SIDEBAR (Left Side) */
+.sidebar {
+  width: 260px; /* Fixed width for sidebar */
+  background-color: #000000;
+  border-right: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.new-chat-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background 0.2s;
+}
+
+.new-chat-btn:hover {
+  background-color: #333;
+}
+
+.session-list {
+  flex: 1;
+  overflow-y: auto; /* Scroll if too many chats */
+}
+
+.session-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #ccc;
+  transition: background 0.2s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.session-item:hover {
+  background-color: #1e1e1e;
+}
+
+.session-item.active {
+  background-color: #333;
+  color: white;
+  font-weight: 500;
+}
+
+.session-item .title {
+  font-size: 0.9rem;
+}
+
+/* 4. CHAT AREA (Center/Right Side) */
+.chat-area {
+  flex: 1; /* Takes up all remaining space */
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e;
+  position: relative;
+}
+
+/* 5. MESSAGES LIST */
+.messages-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem 20%; /* 20% padding keeps text in the center */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.message {
+  display: flex;
+  gap: 1.5rem;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.avatar.user {
+  background-color: #555;
+}
+
+.avatar.ai {
+  background-color: #19c37d; /* ChatGPT Green */
+  color: white;
+}
+
+.message-content {
+  padding-top: 4px; /* Align text with avatar */
+}
+
+/* 6. INPUT AREA (Fixed at bottom) */
+.input-area {
+  padding: 2rem 20%;
+  background-color: #1e1e1e;
+  background-image: linear-gradient(180deg, transparent, #1e1e1e 20%);
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #40414f;
+  border-radius: 12px;
+  padding: 5px 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.input-wrapper input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.send-btn {
+  background: transparent;
+  border: none;
+  color: #ccc;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-btn:hover {
+  background-color: #19c37d;
+  color: white;
+}
+
+.send-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}

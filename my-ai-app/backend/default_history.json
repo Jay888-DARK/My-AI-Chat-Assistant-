@@ -1,0 +1,16 @@
+[
+    {
+        "id": "35d8cf21-68da-404b-b8d4-ba3947da6b6d",
+        "session_id": "default",
+        "role": "user",
+        "text": "hi",
+        "timestamp": "2025-12-15 16:29:06.636597"
+    },
+    {
+        "id": "f0e1bcff-3017-4fd8-bb28-6807af890552",
+        "session_id": "default",
+        "role": "user",
+        "text": "what is the capital of India ",
+        "timestamp": "2025-12-15 16:29:06.636597"
+    }
+]
