@@ -7,7 +7,7 @@ import './App.css';
 
 // --- CONFIGURATION ---
 // Option 1: Local Development (Default)
-const API_BASE = "http://localhost:8000/api";
+const API_BASE = "https://my-ai-chat-assistant.onrender.com";
 
 // Option 2: Public Access (Uncomment this line below when using ngrok for your friend)
 // const API_BASE = "https://your-ngrok-url-here.ngrok-free.app/api"; 
